@@ -13,3 +13,8 @@ class Car {
     this.speed -= 5;
     console.log(`${this.make} speed decreased to ${this.speed} km/h`);
   }
+brake() {
+    this.speed -= 5;
+    console.log(`${this.make} speed decreased to ${this.speed} km/h`);
+  }
+}
