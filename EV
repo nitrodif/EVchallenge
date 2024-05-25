@@ -32,3 +32,14 @@ brake() {
     }
   }
 }
+console.log("Initial state:");
+console.log(`${tesla.make} speed: ${tesla.speed} km/h, charge: ${tesla.charge}%`);
+
+console.log("Accelerating and Charging:");
+tesla.accelerate();
+tesla.accelerate();
+tesla.chargeBattery(23);
+
+console.log("Braking:");  
+tesla.brake();
+tesla.brake();
