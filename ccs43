@@ -48,3 +48,14 @@ class EV(Car):
             print(f"{self.make} has no battery charge, cannot accelerate!")
 
 # Commit message: "Override accelerate method in EV class to adjust speed and charge."
+# Test Data: Car 1: A 'Tesla' starting at 120 km/h, with a battery charge of 23%.
+tesla = EV("Tesla", 120, 23)
+
+# Test accelerate, brake, and chargeBattery methods
+tesla.accelerate(20)  # Increase speed by 20 km/h (charge decreases to 22%)
+tesla.brake(10)       # Decrease speed by 10 km/h
+tesla.chargeBattery(50)  # Charge battery to 50%
+tesla.accelerate(40)  # Increase speed by 40 km/h (charge decreases to 49%)
+
+# Observe how battery charge impacts acceleration
+tesla.accelerate(20)  # Cannot accelerate due to no charge
