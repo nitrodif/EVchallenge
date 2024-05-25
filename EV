@@ -18,3 +18,8 @@ brake() {
     console.log(`${this.make} speed decreased to ${this.speed} km/h`);
   }
 }
+  chargeBattery(chargeTo) {
+    this.charge = chargeTo;
+    console.log(`${this.make} battery charged to ${this.charge}%`);
+  }
+  
