@@ -1,0 +1,21 @@
+class Car:
+    def __init__(self, make, speed=0):
+        self.make = make
+        self.speed = speed
+
+    def accelerate(self, amount):
+        self.speed += amount
+        print(f"{self.make} going at {self.speed} km/h")
+
+    def brake(self, amount):
+        self.speed -= amount
+        if self.speed < 0:
+            self.speed = 0
+        print(f"{self.make} slowing down to {self.speed} km/h")
+
+
+class EV(Car):
+    def __init__(self, make, speed=0, charge=0):
+        super().__init__(make, speed)
+        self.charge = charge  # New property for battery charge
+# Commit message: "Create EV class extending Car with additional charge property."
