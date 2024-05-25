@@ -1,3 +1,4 @@
+  // U74589834
 class Car:
     def __init__(self, make, speed=0):
         self.make = make
@@ -19,3 +20,13 @@ class EV(Car):
         super().__init__(make, speed)
         self.charge = charge  # New property for battery charge
 # Commit message: "Create EV class extending Car with additional charge property."
+class EV(Car):
+    def __init__(self, make, speed=0, charge=0):
+        super().__init__(make, speed)
+        self.charge = charge
+
+    def chargeBattery(self, chargeTo):
+        self.charge = chargeTo
+        print(f"{self.make} battery charged to {self.charge}%")
+
+# Commit message: "Implement chargeBattery method in EV class."
